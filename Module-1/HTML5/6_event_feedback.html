@@ -1,0 +1,57 @@
+<form>
+  <label>Phone:
+    <input type="text" id="phone" onblur="validatePhone()">
+  </label>
+
+  <label>Select Event:
+    <select id="eventFee" onchange="displayFee()">
+      <option value="0">Select</option>
+      <option value="10">Yoga - $10</option>
+      <option value="20">Music - $20</option>
+    </select>
+  </label>
+
+  <p id="feeShow"></p>
+
+  <label>Feedback:
+    <textarea id="feedbackBox" onkeyup="countChars()" placeholder="Your feedback"></textarea>
+  </label>
+
+  <p>Characters: <span id="charNum">0</span></p>
+
+  <img src="event.jpg" ondblclick="enlarge(this)" width="100" alt="Event Image"><br>
+
+  <button type="button" onclick="submitMessage()">Submit</button>
+</form>
+
+<script>
+  function validatePhone() {
+    const phone = document.getElementById('phone').value;
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(phone)) {
+      alert("Please enter a valid 10-digit phone number.");
+    }
+  }
+
+  function displayFee() {
+    const fee = document.getElementById('eventFee').value;
+    document.getElementById('feeShow').textContent = fee > 0 ? `Event fee: $${fee}` : "";
+  }
+
+  function countChars() {
+    const length = document.getElementById('feedbackBox').value.length;
+    document.getElementById('charNum').textContent = length;
+  }
+
+  function enlarge(img) {
+    if (img.style.width === '200px') {
+      img.style.width = '100px';
+    } else {
+      img.style.width = '200px';
+    }
+  }
+
+  function submitMessage() {
+    alert("Feedback submitted, thank you!");
+  }
+</script>

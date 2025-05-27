@@ -1,0 +1,19 @@
+<script>
+    function runTest() {
+      console.log("Test started.");
+
+      try {
+        let result = riskyOperation();
+        console.log("Result is:", result);
+      } catch (error) {
+        console.error("An error occurred:", error);
+        alert("Oops! Something went wrong. Check console for details.");
+      }
+
+      console.log("Test ended.");
+    }
+
+    function riskyOperation() {
+      return notDefinedFunction();
+    }
+  </script>

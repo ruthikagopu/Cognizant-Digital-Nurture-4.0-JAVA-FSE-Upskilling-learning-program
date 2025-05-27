@@ -1,0 +1,19 @@
+.eventCard {
+  border: 2px solid #007BFF;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+input:focus {
+  outline: 2px solid #00BCD4;
+}
+
+/* Hide but keep space */
+.hidden-visible {
+  visibility: hidden;
+}
+
+/* Hide and remove from layout */
+.hidden-display {
+  display: none;
+}

@@ -1,0 +1,19 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.description {
+  font-style: italic;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  text-align: justify;
+  text-transform: capitalize;
+}

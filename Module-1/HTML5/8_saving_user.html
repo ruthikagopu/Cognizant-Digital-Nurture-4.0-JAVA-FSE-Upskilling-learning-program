@@ -1,0 +1,31 @@
+<section id="preferences">
+  <h2>Your Preferences</h2>
+  <select id="preferredEvent" onchange="savePreference()">
+    <option value="music">Music</option>
+    <option value="art">Art</option>
+    <option value="sports">Sports</option>
+  </select>
+  <button onclick="clearPreferences()">Clear Preferences</button>
+</section>
+
+<script>
+  // Load preference on page load
+  window.onload = function() {
+    const pref = localStorage.getItem('preferredEvent');
+    if (pref) {
+      document.getElementById('preferredEvent').value = pref;
+    }
+  }
+
+  function savePreference() {
+    const selected = document.getElementById('preferredEvent').value;
+    localStorage.setItem('preferredEvent', selected);
+    sessionStorage.setItem('sessionPreferredEvent', selected);
+  }
+
+  function clearPreferences() {
+    localStorage.removeItem('preferredEvent');
+    sessionStorage.removeItem('sessionPreferredEvent');
+    document.getElementById('preferredEvent').value = 'music'; // reset to default
+  }
+</script>

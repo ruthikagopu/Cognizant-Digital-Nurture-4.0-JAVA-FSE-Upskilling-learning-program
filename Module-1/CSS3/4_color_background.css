@@ -1,0 +1,11 @@
+body {
+  background: #e0f7fa url('cityscape.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+section.header {
+  background: linear-gradient(90deg, #007BFF, #00BCD4);
+  color: white;
+  padding: 10px;
+}
